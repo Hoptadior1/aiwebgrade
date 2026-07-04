@@ -1,0 +1,205 @@
+/* ─── AIWEBGRADE.COM — GLOBAL STYLES ─────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F8FAFC;
+  --bg-card: #F1F5F9;
+  --border: #E2E8F0;
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --accent: #6366F1;
+  --accent-dark: #4F46E5;
+  --accent-light: #EEF2FF;
+  --green: #22C55E;
+  --red: #EF4444;
+  --orange: #F97316;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --max-width: 780px;
+  --radius: 12px;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────────────────── */
+h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; color: var(--text); }
+h2 { font-size: clamp(22px, 3vw, 32px); font-weight: 700; letter-spacing: -1px; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
+h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+p { color: var(--text-muted); font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--text); font-weight: 600; }
+
+/* ─── LAYOUT ─────────────────────────────────────────────────────────────── */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 64px 0; }
+.section-sm { padding: 40px 0; }
+
+/* ─── NAV ────────────────────────────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-weight: 800; font-size: 17px; color: var(--text);
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: white;
+  padding: 8px 18px; border-radius: 8px;
+  font-size: 13px; font-weight: 600;
+  text-decoration: none; transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--accent-dark); text-decoration: none; }
+
+/* ─── HERO ───────────────────────────────────────────────────────────────── */
+.hero { padding: 72px 0 56px; text-align: center; }
+.hero-tag {
+  display: inline-block;
+  background: var(--accent-light); color: var(--accent);
+  font-size: 12px; font-weight: 600; letter-spacing: 1px;
+  padding: 4px 12px; border-radius: 100px;
+  margin-bottom: 20px; text-transform: uppercase;
+}
+.hero h1 { margin-bottom: 16px; }
+.hero p { max-width: 520px; margin: 0 auto 32px; font-size: 18px; }
+
+/* ─── CTA BLOCKS ─────────────────────────────────────────────────────────── */
+.cta-block {
+  background: var(--accent-light);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin: 48px 0;
+  text-align: center;
+}
+.cta-block h3 { font-size: 20px; margin-bottom: 8px; }
+.cta-block p { margin-bottom: 20px; font-size: 15px; }
+
+.cta-block-academy {
+  background: #FFF7ED;
+  border: 1px solid rgba(249,115,22,0.2);
+}
+.cta-block-academy h3 { color: #C2410C; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 10px;
+  font-weight: 700; font-size: 15px;
+  text-decoration: none; transition: all 0.2s;
+  cursor: pointer; border: none;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-dark); text-decoration: none; transform: translateY(-1px); }
+.btn-orange { background: var(--orange); color: white; }
+.btn-orange:hover { background: #EA580C; text-decoration: none; transform: translateY(-1px); }
+.btn-sm { padding: 8px 18px; font-size: 13px; }
+
+/* ─── CARDS ──────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+/* ─── CHECKLIST ──────────────────────────────────────────────────────────── */
+.checklist { list-style: none; margin: 24px 0; }
+.checklist li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px; color: var(--text-muted);
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist .check { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.checklist .cross { color: var(--red); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+/* ─── STATS ──────────────────────────────────────────────────────────────── */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+.stat { text-align: center; padding: 20px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); }
+.stat-val { font-size: 32px; font-weight: 800; color: var(--accent); letter-spacing: -1px; display: block; }
+.stat-label { font-size: 12px; color: var(--text-light); margin-top: 4px; display: block; line-height: 1.4; }
+
+/* ─── BREADCRUMB ─────────────────────────────────────────────────────────── */
+.breadcrumb {
+  font-size: 13px; color: var(--text-light);
+  padding: 12px 0; font-family: var(--font-mono);
+}
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 6px; }
+
+/* ─── RELATED LINKS ──────────────────────────────────────────────────────── */
+.related { margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--border); }
+.related h3 { margin-bottom: 16px; font-size: 16px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.related-link {
+  display: block; padding: 12px 16px;
+  background: var(--bg-soft); border: 1px solid var(--border);
+  border-radius: 8px; font-size: 13px; color: var(--text-muted);
+  text-decoration: none; transition: all 0.2s;
+}
+.related-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; background: var(--accent-light); }
+
+/* ─── FOOTER ─────────────────────────────────────────────────────────────── */
+.footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  margin-top: 80px;
+  text-align: center;
+}
+.footer p { font-size: 13px; color: var(--text-light); margin: 0; }
+.footer a { color: var(--accent); }
+
+/* ─── PROSE ──────────────────────────────────────────────────────────────── */
+.prose h2 { margin-top: 40px; margin-bottom: 12px; }
+.prose h3 { margin-top: 28px; }
+.prose p { margin-bottom: 16px; }
+.prose ul { padding-left: 20px; margin-bottom: 16px; }
+.prose ul li { margin-bottom: 8px; color: var(--text-muted); }
+
+/* ─── SCORE BAR ──────────────────────────────────────────────────────────── */
+.score-bar { margin: 8px 0; }
+.score-bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+.score-bar-track { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.score-bar-fill { height: 100%; border-radius: 4px; background: var(--accent); transition: width 1s ease; }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  h1 { font-size: 28px; letter-spacing: -1px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .hero { padding: 48px 0 40px; }
+  .section { padding: 48px 0; }
+}
+
+/* ─── GOOGLE FONTS IMPORT ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
