@@ -76,6 +76,9 @@ for path in files:
         if clean in ('/', ''):
             continue
         target = clean.lstrip('/')
+        # skip non-page assets (svg, css, ico, images, external-style files)
+        if re.search(r'\.(svg|css|ico|png|jpg|jpeg|gif|xml|txt|js)$', target):
+            continue
         if target.endswith('/'):
             target += 'index.html'
         elif not target.endswith('.html'):
