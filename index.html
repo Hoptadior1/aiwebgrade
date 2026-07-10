@@ -3,10 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIWebGrade — AI Websites, Digital Growth & Online Business Intelligence</title>
-  <meta name="description" content="Expert guides on AI websites, ChatGPT SEO, WhatsApp automation and digital business growth. The knowledge your competitors don't want you to have." />
+  <title>AIWebGrade — AI Website Intelligence & Growth Guides</title>
+  <meta name="description" content="Expert guides on AI websites, ChatGPT SEO and digital growth. The knowledge your competitors don't want you to have." />
   <link rel="canonical" href="https://www.aiwebgrade.com/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AIWebGrade — AI Website Intelligence & Growth Guides" />
+  <meta property="og:description" content="Expert guides on AI websites, ChatGPT SEO and digital growth. The knowledge your competitors don't want you to have." />
+  <meta property="og:url" content="https://www.aiwebgrade.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.aiwebgrade.com/og-home.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema: WebSite + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "AIWebGrade",
+        "url": "https://www.aiwebgrade.com",
+        "description": "Intelligence for business owners and web professionals on AI websites, ChatGPT SEO and digital growth.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.brivexai.com/scan?url={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "AIWebGrade",
+        "url": "https://www.aiwebgrade.com",
+        "logo": "https://www.aiwebgrade.com/favicon.svg",
+        "sameAs": ["https://www.brivexai.com"]
+      }
+    ]
+  }
+  </script>
+
   <style>
     .top-bar{background:#0F172A;padding:9px 0;font-size:11px;font-family:'JetBrains Mono',monospace;color:#94A3B8;text-align:center;letter-spacing:1px;}
     .top-bar a{color:#6366F1;text-decoration:none;}
@@ -28,17 +65,23 @@
     .art-excerpt{font-size:14px;color:#64748B;line-height:1.7;margin-bottom:12px;}
     .art-meta{font-size:12px;color:#94A3B8;display:flex;align-items:center;gap:12px;}
     .art-tag{background:#F1F5F9;color:#475569;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;}
+    .art-cta-inline{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#6366F1;text-decoration:none;margin-top:8px;}
+    .art-cta-inline:hover{text-decoration:underline;}
     .sidebar-section{margin-bottom:32px;}
     .sidebar-section h4{font-size:11px;font-weight:700;letter-spacing:3px;color:#94A3B8;margin-bottom:14px;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid #E2E8F0;}
     .sidebar-link{display:block;font-size:13px;color:#0F172A;text-decoration:none;padding:8px 0;border-bottom:1px solid #F1F5F9;font-weight:500;}
     .sidebar-link:hover{color:#6366F1;}
     .sidebar-link span{color:#94A3B8;font-size:11px;float:right;}
+    .sidebar-viewall{display:block;font-size:12px;color:#6366F1;text-decoration:none;font-weight:700;padding-top:10px;}
+    .sidebar-viewall:hover{text-decoration:underline;}
     .sidebar-cta{background:#EEF2FF;border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:20px;margin-bottom:16px;}
     .sidebar-cta h4{font-size:14px;font-weight:700;color:#0F172A;margin-bottom:6px;}
-    .sidebar-cta p{font-size:12px;color:#64748B;margin-bottom:12px;}
+    .sidebar-cta p{font-size:12px;color:#64748B;margin-bottom:10px;}
+    .sidebar-cta .proof{font-size:11px;color:#4F46E5;font-weight:600;margin-bottom:10px;display:block;}
     .sidebar-cta a{display:block;background:#6366F1;color:white;text-align:center;padding:9px;border-radius:7px;font-size:13px;font-weight:700;text-decoration:none;}
     .sidebar-cta-orange{background:#FFF7ED;border-color:rgba(249,115,22,0.2);}
     .sidebar-cta-orange a{background:#F97316;}
+    .sidebar-cta-orange .proof{color:#C2410C;}
     .topics-bar{background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0;padding:16px 0;}
     .topic-tag{display:inline-block;background:white;border:1px solid #E2E8F0;color:#475569;padding:5px 12px;border-radius:100px;font-size:12px;font-weight:600;text-decoration:none;margin:3px;transition:all 0.15s;}
     .topic-tag:hover{border-color:#6366F1;color:#6366F1;text-decoration:none;}
@@ -48,18 +91,15 @@
     .mini-card h3{font-size:15px;font-weight:700;color:#0F172A;line-height:1.35;margin-bottom:6px;}
     .mini-card p{font-size:12px;color:#94A3B8;line-height:1.5;}
     .mini-card:hover h3{color:#6366F1;}
-    .divider{height:1px;background:#E2E8F0;margin:32px 0;}
     @media(max-width:768px){.main-grid{grid-template-columns:1fr}.sidebar{border-left:none;padding-left:0;border-top:1px solid #E2E8F0;padding-top:32px}.more-articles{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="top-bar">
     🔥 TRENDING: <a href="/blog/chatgpt-recommends-competitors.html">ChatGPT is recommending your competitors to your clients</a> &nbsp;·&nbsp; <a href="/blog/ai-website-vs-traditional.html">AI websites convert 3x better than traditional</a>
   </div>
 
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">AIWeb<span>Grade</span></a>
@@ -72,7 +112,6 @@
     </div>
   </nav>
 
-  <!-- PUB HERO -->
   <div class="pub-hero">
     <div class="container">
       <span class="issue-tag">// AIWEBGRADE · JULY 2026 · ISSUE #7</span>
@@ -81,7 +120,6 @@
     </div>
   </div>
 
-  <!-- TOPICS -->
   <div class="topics-bar">
     <div class="container">
       <a href="/blog/chatgpt-seo-guide.html" class="topic-tag">🤖 ChatGPT SEO</a>
@@ -97,11 +135,9 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT + SIDEBAR -->
   <div class="container">
     <div class="main-grid">
 
-      <!-- ARTICLES -->
       <main>
 
         <div class="featured-article">
@@ -113,6 +149,7 @@
             <span class="art-tag">ChatGPT SEO</span>
             <span>8 min read</span>
           </div>
+          <a href="/blog/chatgpt-recommends-competitors.html" class="art-cta-inline">Read the full guide →</a>
         </div>
 
         <div class="featured-article">
@@ -124,6 +161,7 @@
             <span class="art-tag">Automation</span>
             <span>6 min read</span>
           </div>
+          <a href="/blog/whatsapp-automation-business.html" class="art-cta-inline">Read the full guide →</a>
         </div>
 
         <div class="featured-article">
@@ -135,6 +173,7 @@
             <span class="art-tag">AI Tools</span>
             <span>12 min read</span>
           </div>
+          <a href="/blog/how-to-start-web-agency.html" class="art-cta-inline">Read the full guide →</a>
         </div>
 
         <div class="featured-article">
@@ -146,28 +185,34 @@
             <span class="art-tag">Data</span>
             <span>7 min read</span>
           </div>
+          <a href="/blog/website-speed-kills-revenue.html" class="art-cta-inline">Read the full guide →</a>
         </div>
 
       </main>
 
-      <!-- SIDEBAR -->
       <aside class="sidebar">
 
-        <!-- CTA 1 — Business owners -->
         <div class="sidebar-cta">
           <h4>🔍 How does your site score?</h4>
-          <p>We used Brivex AI's free scanner to audit all 10,000 sites in our study. Run yours — takes 30 seconds.</p>
+          <span class="proof">"Went from 3 enquiries to 19/month" — James, UK</span>
+          <p>Free 47-point audit. Same tool used on all 10,000 sites in our study. 30 seconds, no signup.</p>
           <a href="https://www.brivexai.com/scan" target="_blank">Run the free scan →</a>
         </div>
 
-        <!-- CTA 2 — Learners -->
         <div class="sidebar-cta sidebar-cta-orange">
-          <h4>🎓 The agency playbook</h4>
-          <p>The exact courses the Brivex AI team recommends for building a $2,500/project web business from scratch.</p>
-          <a href="https://www.brivexai.com/academy" target="_blank">See the courses →</a>
+          <h4>⚡ Want a site built for you?</h4>
+          <span class="proof">Delivered in 7 days · from $799</span>
+          <p>Skip the DIY route. Brivex AI builds AI-powered, high-converting websites — live in a week.</p>
+          <a href="https://www.brivexai.com/services/websites" target="_blank">See website packages →</a>
         </div>
 
-        <!-- Most read -->
+        <div class="sidebar-cta sidebar-cta-orange" style="background:#FFF7ED;">
+          <h4>🎓 The agency playbook</h4>
+          <span class="proof">From $200 · self-paced</span>
+          <p>The exact courses the Brivex AI team recommends for building a $2,500/project web business.</p>
+          <a href="https://www.brivexai.com/academy" target="_blank" style="background:#F97316;">See the courses →</a>
+        </div>
+
         <div class="sidebar-section">
           <h4>Most Read This Week</h4>
           <a href="/blog/chatgpt-recommends-competitors.html" class="sidebar-link">ChatGPT is recommending your competitors <span>→</span></a>
@@ -175,9 +220,9 @@
           <a href="/blog/whatsapp-automation-business.html" class="sidebar-link">WhatsApp automation case study <span>→</span></a>
           <a href="/blog/website-speed-kills-revenue.html" class="sidebar-link">Website speed audit: 10,000 sites <span>→</span></a>
           <a href="/blog/local-seo-google-maps.html" class="sidebar-link">Google Maps top 3 — how to get there <span>→</span></a>
+          <a href="/blog/" class="sidebar-viewall">View all 13 guides →</a>
         </div>
 
-        <!-- By industry -->
         <div class="sidebar-section">
           <h4>Your Industry</h4>
           <a href="/industry/dental.html" class="sidebar-link">🦷 Dental Practices <span>→</span></a>
@@ -185,22 +230,17 @@
           <a href="/industry/law-firm.html" class="sidebar-link">⚖️ Law Firms <span>→</span></a>
           <a href="/industry/gym.html" class="sidebar-link">💪 Gyms & Studios <span>→</span></a>
           <a href="/industry/real-estate.html" class="sidebar-link">🏠 Real Estate <span>→</span></a>
-          <a href="/industry/ecommerce.html" class="sidebar-link">🛒 E-commerce <span>→</span></a>
-          <a href="/industry/contractor.html" class="sidebar-link">🏗️ Contractors <span>→</span></a>
-          <a href="/industry/coach.html" class="sidebar-link">🎯 Coaches <span>→</span></a>
+          <a href="/industry/" class="sidebar-viewall">View all 20 industries →</a>
         </div>
 
-        <!-- By city -->
         <div class="sidebar-section">
           <h4>Your City</h4>
           <a href="/city/new-york.html" class="sidebar-link">🗽 New York <span>→</span></a>
           <a href="/city/london.html" class="sidebar-link">🎡 London <span>→</span></a>
           <a href="/city/dubai.html" class="sidebar-link">🏙️ Dubai <span>→</span></a>
           <a href="/city/los-angeles.html" class="sidebar-link">🌴 Los Angeles <span>→</span></a>
-          <a href="/city/sydney.html" class="sidebar-link">🦘 Sydney <span>→</span></a>
-          <a href="/city/toronto.html" class="sidebar-link">🍁 Toronto <span>→</span></a>
-          <a href="/city/singapore.html" class="sidebar-link">🦁 Singapore <span>→</span></a>
           <a href="/city/nairobi.html" class="sidebar-link">🦒 Nairobi <span>→</span></a>
+          <a href="/city/" class="sidebar-viewall">View all 20 cities →</a>
         </div>
 
       </aside>
@@ -208,7 +248,6 @@
     </div>
   </div>
 
-  <!-- MORE ARTICLES -->
   <div style="background:#F8FAFC;border-top:1px solid #E2E8F0;">
     <div class="container">
       <div class="more-articles">
@@ -253,7 +292,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <p style="font-size:15px;font-weight:800;color:#0F172A;margin-bottom:6px;">AIWebGrade</p>
