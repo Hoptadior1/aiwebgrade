@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+body {
+  @apply bg-[#f6f5f2] text-ink antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-safety px-5 py-3 text-base font-bold text-ink shadow-sm transition hover:bg-safety-dark focus:outline-none focus:ring-2 focus:ring-safety/50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-line bg-white px-5 py-3 text-base font-semibold text-steel transition hover:text-ink;
+  }
+  .prose-site h2 {
+    @apply mt-10 mb-3 text-2xl font-bold text-ink;
+  }
+  .prose-site h3 {
+    @apply mt-6 mb-2 text-lg font-bold text-ink;
+  }
+  .prose-site p,
+  .prose-site li {
+    @apply leading-relaxed text-[#2c3138];
+  }
+  .prose-site p {
+    @apply my-3;
+  }
+  .prose-site ul,
+  .prose-site ol {
+    @apply my-3 space-y-1 pl-6;
+  }
+  .prose-site ul {
+    @apply list-disc;
+  }
+  .prose-site ol {
+    @apply list-decimal;
+  }
+  .prose-site table {
+    @apply my-4 w-full border-collapse text-sm;
+  }
+  .prose-site th {
+    @apply border-b-2 border-ink bg-concrete px-3 py-2 text-left font-semibold;
+  }
+  .prose-site td {
+    @apply border-b border-line px-3 py-2 font-mono;
+  }
+  .prose-site code {
+    @apply rounded bg-concrete px-1 font-mono text-sm;
+  }
+}
+
+@keyframes fill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@media print {
+  body { background: white; }
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area { position: absolute; left: 0; top: 0; width: 100%; padding: 0.5in; }
+}
