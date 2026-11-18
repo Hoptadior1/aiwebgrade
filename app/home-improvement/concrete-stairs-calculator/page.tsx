@@ -50,7 +50,7 @@ export default function Page() {
       intro={<>Steps, rise and run, code checks and concrete for poured steps.</>}
       calculator={<StairsCalculator />}
       faqs={faqs}
-      related={["concrete-slab-cost-calculator", "concrete-footing-calculator", "retaining-wall-calculator", "sonotube-calculator"]}
+      related={["concrete-calculator", "concrete-slab-cost-calculator", "concrete-footing-calculator", "retaining-wall-calculator"]}
       updated="2026-11-18"
     >
       <h2>How the stairs are laid out</h2>

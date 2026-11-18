@@ -14,12 +14,13 @@ export type Tool = {
   section: "home-improvement" | "business";
   name: string;
   short: string;
-  wave: 1 | 2 | 3;
+  wave: number; // 0 = hub calculators
   status: ToolStatus;
 };
 
-// Master catalog (14 tools). Flip status to "live" as each tool ships; sitemap and nav pick it up automatically.
+// Master catalog. Hubs first. Flip status to "live" as each tool ships; sitemap and nav pick it up automatically.
 export const TOOLS: Tool[] = [
+  { slug: "concrete-calculator", section: "home-improvement", name: "Concrete Calculator", short: "Yards, bags & cost for any project", wave: 0, status: "live" },
   { slug: "sonotube-calculator", section: "home-improvement", name: "Sonotube Calculator", short: "Concrete & bags for round pier forms", wave: 1, status: "live" },
   { slug: "concrete-footing-calculator", section: "home-improvement", name: "Concrete Footing Calculator", short: "Strip & pad footings, rebar, yards", wave: 1, status: "live" },
   { slug: "deck-footing-calculator", section: "home-improvement", name: "Deck Footing Calculator", short: "Post count, footing size & concrete", wave: 1, status: "live" },

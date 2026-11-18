@@ -57,7 +57,7 @@ export default function Page() {
       intro={<>Hole depth, hole size, post length and concrete for every fence post.</>}
       calculator={<FenceDepthCalculator />}
       faqs={faqs}
-      related={["fence-post-spacing-calculator", "fence-estimator", "sonotube-calculator", "concrete-footing-calculator"]}
+      related={["concrete-calculator", "fence-post-spacing-calculator", "fence-estimator", "sonotube-calculator"]}
       updated="2026-11-18"
     >
       <h2>How deep to set fence posts</h2>

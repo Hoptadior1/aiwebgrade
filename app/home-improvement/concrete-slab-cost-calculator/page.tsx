@@ -57,7 +57,7 @@ export default function Page() {
       intro={<>What your slab will cost: concrete, base, reinforcement, labor and finish.</>}
       calculator={<SlabCostCalculator />}
       faqs={faqs}
-      related={["shed-foundation-calculator", "concrete-footing-calculator", "concrete-wall-calculator", "sonotube-calculator"]}
+      related={["concrete-calculator", "shed-foundation-calculator", "concrete-footing-calculator", "concrete-wall-calculator"]}
       updated="2026-11-18"
     >
       <h2>What goes into the cost of a concrete slab</h2>

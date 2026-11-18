@@ -54,7 +54,7 @@ export default function Page() {
       intro={<>Blocks, mortar and grout, or poured concrete and rebar, for any wall.</>}
       calculator={<WallCalculator />}
       faqs={faqs}
-      related={["concrete-footing-calculator", "retaining-wall-calculator", "concrete-slab-cost-calculator", "sonotube-calculator"]}
+      related={["concrete-calculator", "concrete-footing-calculator", "retaining-wall-calculator", "concrete-slab-cost-calculator"]}
       updated="2026-11-18"
     >
       <h2>Concrete block (CMU) walls</h2>

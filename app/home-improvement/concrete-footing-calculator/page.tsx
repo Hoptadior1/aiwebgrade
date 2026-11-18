@@ -62,7 +62,7 @@ export default function Page() {
       intro={<>Concrete, rebar and forms for wall and pad footings.</>}
       calculator={<FootingCalculator />}
       faqs={faqs}
-      related={["sonotube-calculator", "deck-footing-calculator", "concrete-wall-calculator", "concrete-slab-cost-calculator"]}
+      related={["concrete-calculator", "sonotube-calculator", "deck-footing-calculator", "concrete-wall-calculator"]}
       updated="2026-11-18"
     >
       <h2>Continuous vs. pad footings</h2>

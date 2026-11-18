@@ -49,7 +49,7 @@ export default function Page() {
       intro={<>Footing size, number of footings and concrete for your deck.</>}
       calculator={<DeckFootingCalculator />}
       faqs={faqs}
-      related={["sonotube-calculator", "concrete-footing-calculator", "fence-post-depth-calculator", "shed-foundation-calculator"]}
+      related={["concrete-calculator", "sonotube-calculator", "concrete-footing-calculator", "fence-post-depth-calculator"]}
       updated="2026-11-18"
     >
       <h2>How deck footings are sized</h2>

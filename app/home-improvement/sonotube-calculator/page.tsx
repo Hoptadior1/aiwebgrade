@@ -55,7 +55,7 @@ export default function Page() {
       intro={<>Bags of concrete, cubic yards and tubes to buy for round pier forms.</>}
       calculator={<SonotubeCalculator />}
       faqs={faqs}
-      related={["deck-footing-calculator", "concrete-footing-calculator", "fence-post-depth-calculator", "shed-foundation-calculator"]}
+      related={["concrete-calculator", "deck-footing-calculator", "concrete-footing-calculator", "fence-post-depth-calculator"]}
       updated="2026-11-18"
     >
       <h2>How the Sonotube calculator works</h2>

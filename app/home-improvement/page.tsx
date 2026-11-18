@@ -45,6 +45,7 @@ export default function HomeImprovementHub() {
       <section className="prose-site mt-12 max-w-3xl">
         <h2>Which calculator do I need?</h2>
         <ul>
+          <li><strong>Just need cubic yards or bags?</strong> The concrete calculator handles any mix of slabs, footings, walls and posts in one project.</li>
           <li><strong>Building a deck?</strong> Start with the deck footing calculator. It sizes the footing from your deck's load and soil.</li>
           <li><strong>Already know the tube size?</strong> The Sonotube calculator turns diameter, depth and count into bags and tubes.</li>
           <li><strong>Pouring under a wall, garage or addition?</strong> The concrete footing calculator handles continuous and pad footings with rebar.</li>
