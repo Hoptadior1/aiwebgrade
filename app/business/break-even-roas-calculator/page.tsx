@@ -46,7 +46,7 @@ export default function Page() {
       intro={<>The minimum ROAS your ads need, and the ROAS for real profit.</>}
       calculator={<RoasCalculator />}
       faqs={faqs}
-      related={["ecommerce-profit-margin-calculator", "marketplace-fee-calculator"]}
+      related={["ecommerce-profit-margin-calculator"]}
       updated="2026-11-18"
     >
       <h2>What break-even ROAS means</h2>

@@ -18,7 +18,7 @@ export type Tool = {
   status: ToolStatus;
 };
 
-// Master catalog. Flip status to "live" as each tool ships; sitemap and nav pick it up automatically.
+// Master catalog (14 tools). Flip status to "live" as each tool ships; sitemap and nav pick it up automatically.
 export const TOOLS: Tool[] = [
   { slug: "sonotube-calculator", section: "home-improvement", name: "Sonotube Calculator", short: "Concrete & bags for round pier forms", wave: 1, status: "live" },
   { slug: "concrete-footing-calculator", section: "home-improvement", name: "Concrete Footing Calculator", short: "Strip & pad footings, rebar, yards", wave: 1, status: "live" },
@@ -32,9 +32,8 @@ export const TOOLS: Tool[] = [
   { slug: "fence-estimator", section: "home-improvement", name: "Chain Link & Panel Fence Estimator", short: "Materials list for a fence run", wave: 2, status: "live" },
   { slug: "ecommerce-profit-margin-calculator", section: "business", name: "Ecommerce Profit Margin Calculator", short: "Margin after fees, shipping & ads", wave: 2, status: "live" },
   { slug: "break-even-roas-calculator", section: "business", name: "Break-Even ROAS Calculator", short: "Minimum ROAS to stay profitable", wave: 2, status: "live" },
-  { slug: "retaining-wall-calculator", section: "home-improvement", name: "Retaining Wall Block Calculator", short: "Blocks, caps & gravel backfill", wave: 3, status: "soon" },
-  { slug: "concrete-stairs-calculator", section: "home-improvement", name: "Concrete Stairs Calculator", short: "Steps, landing & concrete volume", wave: 3, status: "soon" },
-  { slug: "marketplace-fee-calculator", section: "business", name: "Marketplace Fee Calculator", short: "Amazon, Etsy, eBay & more", wave: 3, status: "soon" },
+  { slug: "retaining-wall-calculator", section: "home-improvement", name: "Retaining Wall Block Calculator", short: "Blocks, caps & gravel backfill", wave: 3, status: "live" },
+  { slug: "concrete-stairs-calculator", section: "home-improvement", name: "Concrete Stairs Calculator", short: "Steps, landing & concrete volume", wave: 3, status: "live" },
 ];
 
 export const toolPath = (t: Tool) => `/${t.section}/${t.slug}`;

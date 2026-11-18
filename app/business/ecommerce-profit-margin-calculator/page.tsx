@@ -49,7 +49,7 @@ export default function Page() {
       intro={<>Your real profit per order after fees, shipping, returns and ads.</>}
       calculator={<ProfitMarginCalculator />}
       faqs={faqs}
-      related={["break-even-roas-calculator", "marketplace-fee-calculator"]}
+      related={["break-even-roas-calculator"]}
       updated="2026-11-18"
     >
       <h2>What the calculator includes</h2>
