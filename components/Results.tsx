@@ -44,10 +44,10 @@ export function BagTable({ bags, chosen }: { bags: { size: number; bags: number;
   );
 }
 
-export function ShoppingList({ items }: { items: [string, string][] }) {
+export function ShoppingList({ items, title = "Shopping list" }: { items: [string, string][]; title?: string }) {
   return (
     <div>
-      <h3 className="mb-2 text-sm font-bold uppercase tracking-wider text-steel">Shopping list</h3>
+      <h3 className="mb-2 text-sm font-bold uppercase tracking-wider text-steel">{title}</h3>
       <ul className="divide-y divide-line/60 rounded-md border border-line">
         {items.map(([k, v]) => (
           <li key={k} className="flex justify-between gap-4 px-3 py-2 text-sm">

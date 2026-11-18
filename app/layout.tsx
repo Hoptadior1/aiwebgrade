@@ -34,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="sm:hidden">Calculators</span>
                 <span className="hidden sm:inline">Home Improvement</span>
               </Link>
+              <Link href="/business" className="hover:text-white">Business</Link>
               <Link href="/about" className="hidden hover:text-white sm:inline">About</Link>
             </nav>
           </div>
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div className="flex flex-col gap-1">
               <Link href="/home-improvement" className="hover:text-ink">All home improvement calculators</Link>
+              <Link href="/business" className="hover:text-ink">Business & ecommerce calculators</Link>
               <Link href="/about" className="hover:text-ink">About & methodology</Link>
               <Link href="/privacy" className="hover:text-ink">Privacy policy</Link>
               <Link href="/privacy-choices" className="hover:text-ink">Your Privacy Choices / Do Not Sell or Share My Info</Link>

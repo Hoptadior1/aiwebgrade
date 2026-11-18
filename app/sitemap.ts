@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: SITE.url, lastModified: now, priority: 1 },
     { url: `${SITE.url}/home-improvement`, lastModified: now, priority: 0.9 },
+    { url: `${SITE.url}/business`, lastModified: now, priority: 0.8 },
     ...liveTools().map((t) => ({ url: `${SITE.url}${toolPath(t)}`, lastModified: now, priority: 0.8 })),
     { url: `${SITE.url}/about`, lastModified: now, priority: 0.3 },
     { url: `${SITE.url}/privacy`, lastModified: now, priority: 0.1 },
