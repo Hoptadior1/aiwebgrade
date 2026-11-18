@@ -10,7 +10,7 @@ const tool = getTool("concrete-calculator");
 
 const TITLE = "Concrete Calculator: Cubic Yards, Bags & Cost for Any Project";
 const DESC =
-  "Free concrete calculator. Add slabs, footings, walls, posts and tubes to one project and get cubic yards, 40/50/60/80 lb bags, and a bags-vs-ready-mix cost comparison.";
+  "Free concrete calculator. Add slabs, footings, walls and posts to one project to get cubic yards, 40–80 lb bags, and bags vs ready-mix cost.";
 
 export const metadata: Metadata = {
   title: TITLE,

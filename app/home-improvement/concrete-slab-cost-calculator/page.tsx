@@ -11,7 +11,7 @@ const tool = getTool("concrete-slab-cost-calculator");
 
 const TITLE = "Concrete Slab Cost Calculator (2026): Price per Square Foot";
 const DESC =
-  "Estimate what a concrete slab costs in 2026: concrete, gravel base, mesh or rebar, labor and finish. Uses your local prices, with US averages filled in. Patio, driveway, shed or garage.";
+  "Estimate concrete slab cost in 2026: concrete, gravel base, mesh or rebar, labor and finish, using your local prices or US averages.";
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -10,7 +10,7 @@ const tool = getTool("ecommerce-profit-margin-calculator");
 
 const TITLE = "Ecommerce Profit Margin Calculator: Profit per Order After Fees & Ads";
 const DESC =
-  "Calculate your real ecommerce profit per order after product cost, shipping, payment processing, marketplace fees, returns and ad spend. Shows net margin, markup and break-even ROAS.";
+  "Calculate ecommerce profit per order after product cost, shipping, payment fees, marketplace fees, returns and ads. See net margin, markup and ROAS.";
 
 export const metadata: Metadata = {
   title: TITLE,

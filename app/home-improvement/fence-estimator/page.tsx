@@ -10,7 +10,7 @@ const tool = getTool("fence-estimator");
 
 const TITLE = "Fence Calculator: Wood, Chain Link & Panel Fence Materials";
 const DESC =
-  "Free fence calculator. Get posts, rails, pickets and concrete for a wood privacy or picket fence, a full chain link parts list, or panels and posts, for any layout, with gates and cost.";
+  "Free fence calculator: posts, rails, pickets and concrete for wood privacy or picket fences, plus chain link and panel fence materials and cost.";
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -5,7 +5,7 @@ import { TOOLS, toolPath, SITE, type Tool } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "Free Construction & Project Calculators (US) | AIWebGrade" },
   description:
-    "Free US construction calculators with a shopping list and PDF report: concrete, gravel, deck boards, deck footings, fences, Sonotubes, French drains, retaining walls, stairs, plus ecommerce profit and ROAS.",
+    "Free US construction calculators with shopping lists and PDF reports: concrete, gravel, decks, fences, footings, drainage, plus ecommerce profit.",
   alternates: { canonical: "/" },
   openGraph: { title: "Free Construction & Project Calculators | AIWebGrade", description: "Concrete, gravel, decks, fences, footings, drainage and more, with shopping lists and PDF reports.", url: "/", type: "website" },
 };

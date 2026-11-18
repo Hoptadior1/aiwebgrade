@@ -11,7 +11,7 @@ const tool = getTool("french-drain-calculator");
 
 const TITLE = "French Drain Calculator: Gravel, Pipe & Fabric";
 const DESC =
-  "How much gravel do you need for a French drain? Enter trench length, width and depth to get tons of gravel, perforated pipe, drainage fabric and the slope to your outlet.";
+  "How much gravel for a French drain? Get tons of gravel, perforated pipe, drainage fabric and the slope to your outlet from trench size.";
 
 export const metadata: Metadata = {
   title: TITLE,

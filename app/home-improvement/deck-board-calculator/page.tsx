@@ -10,7 +10,7 @@ const tool = getTool("deck-board-calculator");
 
 const TITLE = "Deck Board Calculator: Boards, Linear Feet & Screws";
 const DESC =
-  "How many deck boards do you need? Enter your deck size to get boards by length (with the least-waste option), linear feet, screws or hidden clips. Wood and composite.";
+  "How many deck boards do you need? Get boards by length with the least-waste option, linear feet, and screws or hidden clips. Wood or composite.";
 
 export const metadata: Metadata = {
   title: TITLE,

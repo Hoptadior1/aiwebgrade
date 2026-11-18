@@ -11,7 +11,7 @@ const tool = getTool("fence-post-spacing-calculator");
 
 const TITLE = "Fence Post Spacing Calculator: How Many Posts & Where";
 const DESC =
-  "Find how many fence posts you need and exactly where to set each one. Even spacing per side, corners, gates, rails and pickets for wood, vinyl and chain link.";
+  "Find how many fence posts you need and where to set each one: even spacing per side, corners, gates, rails and pickets for wood, vinyl and chain link.";
 
 export const metadata: Metadata = {
   title: TITLE,

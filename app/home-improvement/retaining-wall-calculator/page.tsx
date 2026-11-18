@@ -11,7 +11,7 @@ const tool = getTool("retaining-wall-calculator");
 
 const TITLE = "Retaining Wall Block Calculator: Blocks, Caps & Gravel";
 const DESC =
-  "How many retaining wall blocks do you need? Enter length and height to get wall blocks, cap blocks, buried courses, base and drainage gravel, fabric and drain pipe.";
+  "How many retaining wall blocks do you need? Get wall blocks, caps, buried courses, base and drainage gravel, fabric and drain pipe.";
 
 export const metadata: Metadata = {
   title: TITLE,

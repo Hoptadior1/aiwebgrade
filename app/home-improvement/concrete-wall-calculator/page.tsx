@@ -11,7 +11,7 @@ const tool = getTool("concrete-wall-calculator");
 
 const TITLE = "Concrete Wall & Block Calculator: Blocks, Mortar, Grout";
 const DESC =
-  "Calculate concrete block (CMU) walls: blocks, mortar bags and core-fill grout. Or poured walls: cubic yards, bags and rebar. US units with NCMA grout figures.";
+  "Calculate block (CMU) walls: blocks, mortar and core-fill grout. Or poured walls: cubic yards, bags and rebar. US units with NCMA grout figures.";
 
 export const metadata: Metadata = {
   title: TITLE,

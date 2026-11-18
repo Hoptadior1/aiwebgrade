@@ -11,7 +11,7 @@ const tool = getTool("gravel-calculator");
 
 const TITLE = "Gravel Calculator: Tons, Cubic Yards & Bags";
 const DESC =
-  "Free gravel calculator. Add driveways, paths and beds with their own depths and get tons, cubic yards and bags of gravel, plus fabric and a bulk vs bagged cost comparison.";
+  "Free gravel calculator. Add driveways, paths and beds with their own depths to get tons, cubic yards and bags, plus fabric and cost.";
 
 export const metadata: Metadata = {
   title: TITLE,

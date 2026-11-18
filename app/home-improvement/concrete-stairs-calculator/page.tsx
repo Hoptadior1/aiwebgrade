@@ -11,7 +11,7 @@ const tool = getTool("concrete-stairs-calculator");
 
 const TITLE = "Concrete Stairs Calculator: Steps, Rise/Run & Concrete";
 const DESC =
-  "Calculate concrete steps: number of steps, equal riser height, total run, IRC code checks, and cubic yards or bags of concrete, with or without a top landing.";
+  "Calculate concrete steps: number of steps, equal riser height, total run, IRC code checks, and cubic yards or bags of concrete, with or without a landing.";
 
 export const metadata: Metadata = {
   title: TITLE,

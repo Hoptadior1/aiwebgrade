@@ -10,7 +10,7 @@ const tool = getTool("concrete-footing-calculator");
 
 const TITLE = "Concrete Footing Calculator: Yards, Bags & Rebar";
 const DESC =
-  "Calculate concrete for continuous wall footings and square pad footings. Get cubic yards, 80 lb bag counts, rebar footage and form boards, with a printable report.";
+  "Calculate concrete for wall and pad footings: cubic yards, 80 lb bag counts, rebar footage and form boards, with a printable PDF report.";
 
 export const metadata: Metadata = {
   title: TITLE,

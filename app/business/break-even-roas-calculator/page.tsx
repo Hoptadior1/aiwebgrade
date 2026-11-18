@@ -9,7 +9,7 @@ const tool = getTool("break-even-roas-calculator");
 
 const TITLE = "Break-Even ROAS Calculator: Minimum ROAS & Max CPA";
 const DESC =
-  "Find the minimum ROAS your ads need to break even, your max cost per purchase, and the ROAS needed for any target profit margin. Includes shipping, payment fees and returns.";
+  "Find the minimum ROAS your ads need to break even, your max cost per purchase, and the ROAS for any target profit margin. Includes fees and returns.";
 
 export const metadata: Metadata = {
   title: TITLE,
