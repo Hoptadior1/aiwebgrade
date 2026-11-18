@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("concrete-wall-calculator");
 
+const TITLE = "Concrete Wall & Block Calculator: Blocks, Mortar, Grout";
+const DESC =
+  "Calculate concrete block (CMU) walls: blocks, mortar bags and core-fill grout. Or poured walls: cubic yards, bags and rebar. US units with NCMA grout figures.";
+
 export const metadata: Metadata = {
-  title: "Concrete Wall & Block Calculator: Blocks, Mortar, Grout",
-  description:
-    "Calculate concrete block (CMU) walls: blocks, mortar bags and core-fill grout. Or poured walls: cubic yards, bags and rebar. US units with NCMA grout figures.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

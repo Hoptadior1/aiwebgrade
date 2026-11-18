@@ -7,11 +7,15 @@ import { getTool, toolPath } from "@/lib/site";
 
 const tool = getTool("deck-footing-calculator");
 
+const TITLE = "Deck Footing Calculator: Size, Spacing & Concrete";
+const DESC =
+  "Size deck footings from your deck dimensions, post spacing and soil type. Get footing diameter, number of footings, concrete bags and Sonotube lengths.";
+
 export const metadata: Metadata = {
-  title: "Deck Footing Calculator: Size, Spacing & Concrete",
-  description:
-    "Size deck footings from your deck dimensions, post spacing and soil type. Get footing diameter, number of footings, concrete bags and Sonotube lengths.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [
@@ -49,7 +53,7 @@ export default function Page() {
       intro={<>Footing size, number of footings and concrete for your deck.</>}
       calculator={<DeckFootingCalculator />}
       faqs={faqs}
-      related={["concrete-calculator", "sonotube-calculator", "concrete-footing-calculator", "fence-post-depth-calculator"]}
+      related={["deck-board-calculator", "concrete-calculator", "sonotube-calculator", "concrete-footing-calculator"]}
       updated="2026-11-18"
     >
       <h2>How deck footings are sized</h2>

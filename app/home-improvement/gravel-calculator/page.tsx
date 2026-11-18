@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("gravel-calculator");
 
+const TITLE = "Gravel Calculator: Tons, Cubic Yards & Bags";
+const DESC =
+  "Free gravel calculator. Add driveways, paths and beds with their own depths and get tons, cubic yards and bags of gravel, plus fabric and a bulk vs bagged cost comparison.";
+
 export const metadata: Metadata = {
-  title: "Gravel Calculator: Tons, Cubic Yards & Bags",
-  description:
-    "Free gravel calculator. Add driveways, paths and beds with their own depths and get tons, cubic yards and bags of gravel, plus fabric and a bulk vs bagged cost comparison.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("shed-foundation-calculator");
 
+const TITLE = "Shed Foundation Calculator: Gravel Pad, Slab or Blocks";
+const DESC =
+  "Calculate a shed foundation: tons of gravel for a gravel pad, concrete for a slab, or blocks and skids. Works for 8×10, 10×12, 12×16 and any size shed.";
+
 export const metadata: Metadata = {
-  title: "Shed Foundation Calculator: Gravel Pad, Slab or Blocks",
-  description:
-    "Calculate a shed foundation: tons of gravel for a gravel pad, concrete for a slab, or blocks and skids. Works for 8×10, 10×12, 12×16 and any size shed.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

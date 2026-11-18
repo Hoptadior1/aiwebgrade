@@ -7,11 +7,15 @@ import { getTool, toolPath } from "@/lib/site";
 
 const tool = getTool("break-even-roas-calculator");
 
+const TITLE = "Break-Even ROAS Calculator: Minimum ROAS & Max CPA";
+const DESC =
+  "Find the minimum ROAS your ads need to break even, your max cost per purchase, and the ROAS needed for any target profit margin. Includes shipping, payment fees and returns.";
+
 export const metadata: Metadata = {
-  title: "Break-Even ROAS Calculator: Minimum ROAS & Max CPA",
-  description:
-    "Find the minimum ROAS your ads need to break even, your max cost per purchase, and the ROAS needed for any target profit margin. Includes shipping, payment fees and returns.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

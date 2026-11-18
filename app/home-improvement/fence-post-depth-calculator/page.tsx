@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("fence-post-depth-calculator");
 
+const TITLE = "Fence Post Depth Calculator: How Deep to Set Fence Posts";
+const DESC =
+  "How deep should fence posts be? Enter fence height, post size and frost depth to get hole depth, hole diameter, post length and bags of concrete per post.";
+
 export const metadata: Metadata = {
-  title: "Fence Post Depth Calculator: How Deep to Set Fence Posts",
-  description:
-    "How deep should fence posts be? Enter fence height, post size and frost depth to get hole depth, hole diameter, post length and bags of concrete per post.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [
@@ -57,7 +61,7 @@ export default function Page() {
       intro={<>Hole depth, hole size, post length and concrete for every fence post.</>}
       calculator={<FenceDepthCalculator />}
       faqs={faqs}
-      related={["concrete-calculator", "fence-post-spacing-calculator", "fence-estimator", "sonotube-calculator"]}
+      related={["fence-estimator", "concrete-calculator", "fence-post-spacing-calculator", "sonotube-calculator"]}
       updated="2026-11-18"
     >
       <h2>How deep to set fence posts</h2>

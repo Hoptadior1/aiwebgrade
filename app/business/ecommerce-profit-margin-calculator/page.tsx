@@ -8,11 +8,15 @@ import { calcUnit } from "@/lib/calc/ecommerce";
 
 const tool = getTool("ecommerce-profit-margin-calculator");
 
+const TITLE = "Ecommerce Profit Margin Calculator: Profit per Order After Fees & Ads";
+const DESC =
+  "Calculate your real ecommerce profit per order after product cost, shipping, payment processing, marketplace fees, returns and ad spend. Shows net margin, markup and break-even ROAS.";
+
 export const metadata: Metadata = {
-  title: "Ecommerce Profit Margin Calculator: Profit per Order After Fees & Ads",
-  description:
-    "Calculate your real ecommerce profit per order after product cost, shipping, payment processing, marketplace fees, returns and ad spend. Shows net margin, markup and break-even ROAS.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const m2 = (v: number) => v.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });

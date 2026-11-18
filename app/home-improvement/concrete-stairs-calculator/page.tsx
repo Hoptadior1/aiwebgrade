@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("concrete-stairs-calculator");
 
+const TITLE = "Concrete Stairs Calculator: Steps, Rise/Run & Concrete";
+const DESC =
+  "Calculate concrete steps: number of steps, equal riser height, total run, IRC code checks, and cubic yards or bags of concrete, with or without a top landing.";
+
 export const metadata: Metadata = {
-  title: "Concrete Stairs Calculator: Steps, Rise/Run & Concrete",
-  description:
-    "Calculate concrete steps: number of steps, equal riser height, total run, IRC code checks, and cubic yards or bags of concrete, with or without a top landing.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

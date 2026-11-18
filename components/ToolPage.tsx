@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import AdSlot from "./AdSlot";
+import { EmbedBox } from "./Embed";
 import { SITE, TOOLS, toolPath, type Tool } from "@/lib/site";
 
 export type Faq = { q: string; a: string };
@@ -69,6 +70,7 @@ export default function ToolPage({
         <div className="mt-1 max-w-2xl text-steel print:hidden">{intro}</div>
 
         <div className="mt-4">{calculator}</div>
+        <div className="mt-4"><EmbedBox slug={tool.slug} name={tool.name} path={toolPath(tool)} /></div>
 
         <div className="prose-site mt-10 print:hidden">{children}</div>
 

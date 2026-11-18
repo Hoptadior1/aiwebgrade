@@ -8,11 +8,15 @@ import { boxCuFt, fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("concrete-footing-calculator");
 
+const TITLE = "Concrete Footing Calculator: Yards, Bags & Rebar";
+const DESC =
+  "Calculate concrete for continuous wall footings and square pad footings. Get cubic yards, 80 lb bag counts, rebar footage and form boards, with a printable report.";
+
 export const metadata: Metadata = {
-  title: "Concrete Footing Calculator: Yards, Bags & Rebar",
-  description:
-    "Calculate concrete for continuous wall footings and square pad footings. Get cubic yards, 80 lb bag counts, rebar footage and form boards, with a printable report.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

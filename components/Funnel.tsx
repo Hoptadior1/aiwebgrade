@@ -7,6 +7,7 @@ import PdfCard from "./PdfCard";
 import { PROCESSING_MS } from "@/lib/ads";
 import { SITE } from "@/lib/site";
 import { downloadPdf, type PdfReport } from "@/lib/pdf";
+import { useIsEmbed } from "./Embed";
 
 type Stage = "input" | "processing" | "result";
 
@@ -90,6 +91,7 @@ export default function Funnel({
   inputSummary: SummaryRow[];
 }) {
   const top = useRef<HTMLDivElement>(null);
+  const embed = useIsEmbed();
   const [pdfKey, setPdfKey] = useState(0);
   const [card, setCard] = useState<null | "working" | "done" | "error">(null);
 
@@ -164,7 +166,8 @@ export default function Funnel({
                 const ns = nextStep?.();
                 return ns ? (
                   <Link
-                    href={ns.href}
+                    href={embed ? `${SITE.url}${ns.href}` : ns.href}
+                    target={embed ? "_blank" : undefined}
                     className="group flex flex-col gap-3 rounded-lg border-2 border-ink bg-ink p-4 text-white transition hover:bg-[#23272d] sm:flex-row sm:items-center print:hidden"
                   >
                     <div className="flex-1">

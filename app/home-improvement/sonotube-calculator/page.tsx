@@ -8,11 +8,15 @@ import { BAG_YIELD_CU_FT, TUBE_DIAMETERS_IN, cylinderCuFt, fmt } from "@/lib/cal
 
 const tool = getTool("sonotube-calculator");
 
+const TITLE = "Sonotube Calculator: How Many Bags of Concrete per Tube?";
+const DESC =
+  "Free Sonotube calculator. Enter tube diameter, depth and count to get 40, 50, 60 or 80 lb bags, cubic yards, tube lengths and a printable shopping list.";
+
 export const metadata: Metadata = {
-  title: "Sonotube Calculator: How Many Bags of Concrete per Tube?",
-  description:
-    "Free Sonotube calculator. Enter tube diameter, depth and count to get 40, 50, 60 or 80 lb bags, cubic yards, tube lengths and a printable shopping list.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

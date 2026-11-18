@@ -86,3 +86,15 @@ test("unit economics + ROAS", () => {
   close(targetRoas(40, 17.54, 10)!, 2.954, 0.001);
   assert.equal(targetRoas(40, 17.54, 50), null);
 });
+test("wood privacy fence: posts, rails, pickets, concrete", () => {
+  const r = calcFenceEstimate({ ...fe, kind: "wood", heightFt: 6, postSpacingFt: 8, railsPerPanel: 3, picketWidthIn: 5.5, picketGapIn: 0, woodPost: "4x4", pricePerPost: 15, pricePerRailBoard: 5, pricePerPicket: 3, pricePerBag: 6 });
+  const q = (n: string) => r.items.find((x) => x.name.startsWith(n))!.qty;
+  // same layout as spacing test: 35 posts, 33 sections, 537 pickets
+  assert.equal(r.posts, 35);
+  assert.equal(q("Pickets"), 537);
+  assert.equal(q("2×4 rails"), 33 * 3 - 3); // minus gate section rails
+  assert.equal(q("Exterior screws"), 537 * 3 * 2);
+  // 6 ft, 4x4: 36 in embed -> ~1.72 cu ft each; windy (privacy 6 ft) -> 45 in embed
+  assert.ok(q("50 lb fast-setting") > 35 * 4);
+  assert.ok(r.cost! > 0);
+});

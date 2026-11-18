@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("french-drain-calculator");
 
+const TITLE = "French Drain Calculator: Gravel, Pipe & Fabric";
+const DESC =
+  "How much gravel do you need for a French drain? Enter trench length, width and depth to get tons of gravel, perforated pipe, drainage fabric and the slope to your outlet.";
+
 export const metadata: Metadata = {
-  title: "French Drain Calculator: Gravel, Pipe & Fabric",
-  description:
-    "How much gravel do you need for a French drain? Enter trench length, width and depth to get tons of gravel, perforated pipe, drainage fabric and the slope to your outlet.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

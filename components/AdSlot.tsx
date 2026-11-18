@@ -3,6 +3,7 @@
 import { useEffect, useRef, type CSSProperties } from "react";
 import { AD_SLOTS, LAZY_MARGIN_PX, REFRESH_SECONDS, REFRESH_SLOTS, SLOT_HEIGHT, type AdTag, type SlotId } from "@/lib/ads";
 import { isOptedOut } from "@/lib/privacy";
+import { usePathname } from "next/navigation";
 
 /** Injects a raw ad snippet and re-creates its <script> tags so the browser runs them. */
 export function injectTag(container: HTMLElement, tag: NonNullable<AdTag>) {
@@ -23,7 +24,8 @@ export const hasAd = (id: SlotId) => !!AD_SLOTS[id] || process.env.NODE_ENV !== 
  */
 export default function AdSlot({ id, className = "", label = true }: { id: SlotId; className?: string; label?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
-  const tag = AD_SLOTS[id];
+  const embed = (usePathname() ?? "").startsWith("/embed");
+  const tag = embed ? null : AD_SLOTS[id];
   const [hm, hd] = SLOT_HEIGHT[id];
   const style = { "--hm": `${hm}px`, "--hd": `${hd}px` } as CSSProperties;
   const sized = "min-h-[var(--hm)] sm:min-h-[var(--hd)]";
@@ -80,7 +82,7 @@ export default function AdSlot({ id, className = "", label = true }: { id: SlotI
   }, [id, tag]);
 
   if (!tag) {
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV !== "production" && !embed) {
       return (
         <div
           data-ad-slot={id}

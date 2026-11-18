@@ -21,6 +21,7 @@ export type Tool = {
 // Master catalog. Hubs first. Flip status to "live" as each tool ships; sitemap and nav pick it up automatically.
 export const TOOLS: Tool[] = [
   { slug: "concrete-calculator", section: "home-improvement", name: "Concrete Calculator", short: "Yards, bags & cost for any project", wave: 0, status: "live" },
+  { slug: "deck-board-calculator", section: "home-improvement", name: "Deck Board Calculator", short: "Boards, linear feet & screws", wave: 0, status: "live" },
   { slug: "gravel-calculator", section: "home-improvement", name: "Gravel Calculator", short: "Tons, yards & bags for driveways and paths", wave: 0, status: "live" },
   { slug: "sonotube-calculator", section: "home-improvement", name: "Sonotube Calculator", short: "Concrete & bags for round pier forms", wave: 1, status: "live" },
   { slug: "concrete-footing-calculator", section: "home-improvement", name: "Concrete Footing Calculator", short: "Strip & pad footings, rebar, yards", wave: 1, status: "live" },
@@ -31,7 +32,7 @@ export const TOOLS: Tool[] = [
   { slug: "concrete-slab-cost-calculator", section: "home-improvement", name: "Concrete Slab Cost Calculator", short: "Slab volume and installed cost", wave: 2, status: "live" },
   { slug: "french-drain-calculator", section: "home-improvement", name: "French Drain Calculator", short: "Gravel, pipe & fabric for a trench", wave: 2, status: "live" },
   { slug: "concrete-wall-calculator", section: "home-improvement", name: "Concrete Wall Calculator", short: "Poured walls & block core fill", wave: 2, status: "live" },
-  { slug: "fence-estimator", section: "home-improvement", name: "Chain Link & Panel Fence Estimator", short: "Materials list for a fence run", wave: 2, status: "live" },
+  { slug: "fence-estimator", section: "home-improvement", name: "Fence Calculator", short: "Wood, chain link & panel fence materials", wave: 2, status: "live" },
   { slug: "ecommerce-profit-margin-calculator", section: "business", name: "Ecommerce Profit Margin Calculator", short: "Margin after fees, shipping & ads", wave: 2, status: "live" },
   { slug: "break-even-roas-calculator", section: "business", name: "Break-Even ROAS Calculator", short: "Minimum ROAS to stay profitable", wave: 2, status: "live" },
   { slug: "retaining-wall-calculator", section: "home-improvement", name: "Retaining Wall Block Calculator", short: "Blocks, caps & gravel backfill", wave: 3, status: "live" },

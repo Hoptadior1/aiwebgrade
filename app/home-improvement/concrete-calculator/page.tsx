@@ -8,11 +8,15 @@ import { BAG_SIZES, BAG_YIELD_CU_FT, boxCuFt, bagsNeeded, cuFtToYd, fmt } from "
 
 const tool = getTool("concrete-calculator");
 
+const TITLE = "Concrete Calculator: Cubic Yards, Bags & Cost for Any Project";
+const DESC =
+  "Free concrete calculator. Add slabs, footings, walls, posts and tubes to one project and get cubic yards, 40/50/60/80 lb bags, and a bags-vs-ready-mix cost comparison.";
+
 export const metadata: Metadata = {
-  title: "Concrete Calculator: Cubic Yards, Bags & Cost for Any Project",
-  description:
-    "Free concrete calculator. Add slabs, footings, walls, posts and tubes to one project and get cubic yards, 40/50/60/80 lb bags, and a bags-vs-ready-mix cost comparison.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [

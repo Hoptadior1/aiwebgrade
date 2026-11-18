@@ -9,11 +9,15 @@ import { fmt, money } from "@/lib/calc/concrete";
 
 const tool = getTool("concrete-slab-cost-calculator");
 
+const TITLE = "Concrete Slab Cost Calculator (2026): Price per Square Foot";
+const DESC =
+  "Estimate what a concrete slab costs in 2026: concrete, gravel base, mesh or rebar, labor and finish. Uses your local prices, with US averages filled in. Patio, driveway, shed or garage.";
+
 export const metadata: Metadata = {
-  title: "Concrete Slab Cost Calculator (2026): Price per Square Foot",
-  description:
-    "Estimate what a concrete slab costs in 2026: concrete, gravel base, mesh or rebar, labor and finish. Uses your local prices, with US averages filled in. Patio, driveway, shed or garage.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const base = { thicknessIn: 4, baseIn: 4, reinforcement: "mesh" as const, rebarSpacingIn: 18, finish: "broom" as const, supply: "readymix" as const, diy: false, wastePct: 5, extras: 0, ...SLAB_DEFAULTS };

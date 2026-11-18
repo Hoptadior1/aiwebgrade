@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("fence-post-spacing-calculator");
 
+const TITLE = "Fence Post Spacing Calculator: How Many Posts & Where";
+const DESC =
+  "Find how many fence posts you need and exactly where to set each one. Even spacing per side, corners, gates, rails and pickets for wood, vinyl and chain link.";
+
 export const metadata: Metadata = {
-  title: "Fence Post Spacing Calculator: How Many Posts & Where",
-  description:
-    "Find how many fence posts you need and exactly where to set each one. Even spacing per side, corners, gates, rails and pickets for wood, vinyl and chain link.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [
@@ -54,7 +58,7 @@ export default function Page() {
       intro={<>How many posts you need and exactly where each one goes.</>}
       calculator={<FenceSpacingCalculator />}
       faqs={faqs}
-      related={["fence-post-depth-calculator", "fence-estimator", "concrete-footing-calculator", "shed-foundation-calculator"]}
+      related={["fence-estimator", "fence-post-depth-calculator", "concrete-footing-calculator", "shed-foundation-calculator"]}
       updated="2026-11-18"
     >
       <h2>How the spacing is calculated</h2>

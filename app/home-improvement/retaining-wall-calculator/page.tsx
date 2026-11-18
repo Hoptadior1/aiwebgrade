@@ -9,11 +9,15 @@ import { fmt } from "@/lib/calc/concrete";
 
 const tool = getTool("retaining-wall-calculator");
 
+const TITLE = "Retaining Wall Block Calculator: Blocks, Caps & Gravel";
+const DESC =
+  "How many retaining wall blocks do you need? Enter length and height to get wall blocks, cap blocks, buried courses, base and drainage gravel, fabric and drain pipe.";
+
 export const metadata: Metadata = {
-  title: "Retaining Wall Block Calculator: Blocks, Caps & Gravel",
-  description:
-    "How many retaining wall blocks do you need? Enter length and height to get wall blocks, cap blocks, buried courses, base and drainage gravel, fabric and drain pipe.",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: toolPath(tool) },
+  openGraph: { title: TITLE, description: DESC, url: toolPath(tool), type: "website" },
 };
 
 const faqs: Faq[] = [
