@@ -13,7 +13,8 @@
  *   These are skipped for visitors who opt out on /privacy-choices or send a Global Privacy Control signal.
  *   Most networks also offer a "non-personalized" tag; put that in a second slot entry if you have one.
  */
-export type AdTag = { html: string; personalized?: boolean } | null;
+export type AdTag = { html: string; personalized?: boolean; show?: "all" | "desktop" | "mobile" } | null;
+// show: "desktop" = only on screens ≥768 px wide (e.g. 728×90), "mobile" = only below 768 px. Default "all".
 
 export type SlotId =
   | "header" // compact leaderboard under the site header: 728x90 desktop / 320x50 mobile
@@ -29,19 +30,35 @@ export type SlotId =
   | "sidebar-2" // desktop sidebar, sticky while scrolling the article (300x600)
   | "mobile-anchor"; // sticky 320x50 bar at the bottom of phone screens, closable
 
+// ── Adsterra units (one unit per size is allowed per site) ──
+const banner = (key: string, w: number, h: number) =>
+  `<script>atOptions = { 'key' : '${key}', 'format' : 'iframe', 'height' : ${h}, 'width' : ${w}, 'params' : {} };</script>` +
+  `<script src="https://bauval.org/22/${key}"></script>`;
+
+const ADSTERRA_300x250 = banner("229095a9b9b8be75afe6c7e584d6171c", 300, 250);
+const ADSTERRA_728x90 = banner("cd107464453bf4c23c80caffd4731c57", 728, 90);
+const ADSTERRA_320x50 = banner("6fa0e92a12b1bd50c62846c50729dc2e", 320, 50);
+const ADSTERRA_160x600 = banner("2a2acb049b3da348724823ef98f98475", 160, 600);
+const ADSTERRA_NATIVE =
+  `<script async="async" data-cfasync="false" src="https://bauval.org/21/16de8843b23a439a50648c573754be27"></script>` +
+  `<div id="container-16de8843b23a439a50648c573754be27"></div>`;
+
+// The funnel shows ONE stage at a time (form → processing → results), so the single 300×250 unit
+// is reused across those three slots: never twice on screen, a fresh impression at each step.
+// Slots left null show nothing. Fill them if Adsterra enables extra units, or with a second network.
 export const AD_SLOTS: Record<SlotId, AdTag> = {
-  header: null,
-  "input-below": null,
-  processing: null,
+  header: { html: ADSTERRA_728x90, show: "desktop" },
+  "input-below": { html: ADSTERRA_300x250 },
+  processing: { html: ADSTERRA_300x250 },
   "result-top": null,
-  "result-pdf": null,
+  "result-pdf": { html: ADSTERRA_300x250 },
   "pdf-card": null,
-  "content-1": null,
+  "content-1": { html: ADSTERRA_NATIVE },
   "content-2": null,
   "content-3": null,
   sidebar: null,
-  "sidebar-2": null,
-  "mobile-anchor": null,
+  "sidebar-2": { html: ADSTERRA_160x600, show: "desktop" },
+  "mobile-anchor": { html: ADSTERRA_320x50, show: "mobile" },
 };
 
 /**

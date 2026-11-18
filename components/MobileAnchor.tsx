@@ -12,7 +12,7 @@ export default function MobileAnchor() {
     try {
       closed = sessionStorage.getItem("anchor-closed") === "1";
     } catch {}
-    setOpen(!closed && hasAd("mobile-anchor"));
+    setOpen(!closed && hasAd("mobile-anchor") && !window.matchMedia("(min-width: 768px)").matches);
   }, []);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function MobileAnchor() {
 
   if (!open) return null;
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-2 py-1.5 shadow-[0_-2px_8px_rgba(0,0,0,0.08)] backdrop-blur sm:hidden print:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-2 py-1.5 shadow-[0_-2px_8px_rgba(0,0,0,0.08)] backdrop-blur md:hidden print:hidden">
       <button
         onClick={() => {
           setOpen(false);

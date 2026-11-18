@@ -32,6 +32,8 @@ export default function AdSlot({ id, className = "", label = true }: { id: SlotI
     const el = ref.current;
     if (!el || !tag) return;
     if (tag.personalized && isOptedOut()) return;
+    const desktop = window.matchMedia("(min-width: 768px)").matches;
+    if ((tag.show === "desktop" && !desktop) || (tag.show === "mobile" && desktop)) return;
 
     let loaded = false;
     let visible = false;
@@ -92,8 +94,9 @@ export default function AdSlot({ id, className = "", label = true }: { id: SlotI
     return null;
   }
 
+  const vis = tag.show === "desktop" ? "hidden md:block" : tag.show === "mobile" ? "md:hidden" : "";
   return (
-    <div data-ad-slot={id} className={`print:hidden ${className}`}>
+    <div data-ad-slot={id} className={`print:hidden ${vis} ${className}`}>
       {label && <div className="mb-1 text-center text-[10px] uppercase tracking-widest text-steel/60">Advertisement</div>}
       <div ref={ref} className={`flex justify-center ${sized}`} style={style} />
     </div>
