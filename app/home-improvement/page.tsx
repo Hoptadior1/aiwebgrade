@@ -43,11 +43,13 @@ export default function HomeImprovementHub() {
       )}
 
       <section className="prose-site mt-12 max-w-3xl">
-        <h2>Which footing calculator do I need?</h2>
+        <h2>Which calculator do I need?</h2>
         <ul>
           <li><strong>Building a deck?</strong> Start with the deck footing calculator. It sizes the footing from your deck's load and soil.</li>
           <li><strong>Already know the tube size?</strong> The Sonotube calculator turns diameter, depth and count into bags and tubes.</li>
           <li><strong>Pouring under a wall, garage or addition?</strong> The concrete footing calculator handles continuous and pad footings with rebar.</li>
+          <li><strong>Putting up a fence?</strong> Use the post spacing calculator to count posts, then the post depth calculator for holes and concrete.</li>
+          <li><strong>Setting a shed?</strong> The shed foundation calculator covers gravel pads, slabs and blocks.</li>
         </ul>
       </section>
     </div>
