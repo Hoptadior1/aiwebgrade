@@ -3,7 +3,7 @@ export const SITE = {
   shortName: "AIWebGrade",
   tagline: "Free construction & project calculators for US homeowners and contractors",
   url: "https://www.aiwebgrade.com",
-  contactEmail: "hello@aiwebgrade.com", // change to your real inbox
+  contactEmail: "briandavidgta6@gmail.com", // change to your real inbox
   locale: "en_US",
 };
 
