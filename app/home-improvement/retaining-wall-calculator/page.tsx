@@ -50,7 +50,7 @@ export default function Page() {
       intro={<>Blocks, caps, base and drainage gravel for a segmental block wall.</>}
       calculator={<RetainingWallCalculator />}
       faqs={faqs}
-      related={["french-drain-calculator", "concrete-wall-calculator", "concrete-footing-calculator", "concrete-stairs-calculator"]}
+      related={["gravel-calculator", "french-drain-calculator", "concrete-wall-calculator", "concrete-footing-calculator"]}
       updated="2026-11-18"
     >
       <h2>How the calculator works</h2>

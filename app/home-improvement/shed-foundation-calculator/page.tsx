@@ -69,7 +69,7 @@ export default function Page() {
       intro={<>Gravel, concrete or blocks for any size shed, with a shopping list.</>}
       calculator={<ShedFoundationCalculator />}
       faqs={faqs}
-      related={["concrete-calculator", "concrete-slab-cost-calculator", "sonotube-calculator", "concrete-footing-calculator"]}
+      related={["gravel-calculator", "concrete-calculator", "concrete-slab-cost-calculator", "sonotube-calculator"]}
       updated="2026-11-18"
     >
       <h2>Three ways to build a shed foundation</h2>

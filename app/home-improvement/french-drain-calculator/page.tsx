@@ -55,7 +55,7 @@ export default function Page() {
       intro={<>Gravel, perforated pipe, fabric and slope for your drainage trench.</>}
       calculator={<FrenchDrainCalculator />}
       faqs={faqs}
-      related={["shed-foundation-calculator", "concrete-slab-cost-calculator", "fence-post-depth-calculator", "concrete-footing-calculator"]}
+      related={["gravel-calculator", "shed-foundation-calculator", "concrete-slab-cost-calculator", "fence-post-depth-calculator"]}
       updated="2026-11-18"
     >
       <h2>How a French drain works</h2>
